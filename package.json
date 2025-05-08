@@ -1,0 +1,23 @@
+{
+  "name": "writenode-backend",
+  "version": "1.0.0",
+  "description": "WriteNode is distributed Microservice CRM System",
+  "main": "ecosystem.config.js",
+  "scripts": {
+    "test": "test ecosystem.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WriteNode/writenode-backend.git"
+  },
+  "keywords": [
+    "writefront",
+    "crm"
+  ],
+  "author": "M Hasan",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/WriteNode/writenode-backend/issues"
+  },
+  "homepage": "https://github.com/WriteNode/writenode-backend#readme"
+}

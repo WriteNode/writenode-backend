@@ -1,0 +1,9 @@
+CREATE OR REPLACE FUNCTION prevent_uuid_update()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF NEW.id IS DISTINCT FROM OLD.id THEN
+    RAISE EXCEPTION 'Primary key id (UUID) is immutable.';
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
