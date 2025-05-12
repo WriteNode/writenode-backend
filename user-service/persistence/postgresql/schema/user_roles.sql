@@ -1,6 +1,7 @@
 CREATE TABLE user_roles (
     id SMALLINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     user_id UUID NOT NULL,
+    corporation_id UUID NOT NULL,
     role_name VARCHAR(255) NOT NULL,
     role_description TEXT, -- Optional description for the role
     permissions JSONB, -- Stores an array or object of permissions (e.g., { "create": true, "edit": false })

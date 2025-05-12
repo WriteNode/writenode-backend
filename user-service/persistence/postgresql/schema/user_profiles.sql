@@ -1,6 +1,7 @@
 CREATE TABLE account_profiles (
     serial_no BIGINT GENERATED ALWAYS AS IDENTITY UNIQUE,
     id UUID PRIMARY KEY,
+    corporation_id UUID NOT NULL,
     account_id UUID NOT NULL UNIQUE,
     first_name VARCHAR(64),
     middle_name VARCHAR(64),

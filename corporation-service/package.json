@@ -1,0 +1,26 @@
+{
+  "name": "corporation-service",
+  "version": "1.0.0",
+  "description": "Corporation Microservice",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "node sync-aliases.js",
+    "start": "npm run prebuild && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "file-stream-rotator": "^1.0.0",
+    "module-alias": "^2.2.3",
+    "pg": "^8.15.6",
+    "pino": "^9.6.0",
+    "prom-client": "^15.1.3",
+    "uuid": "^11.1.0"
+  },
+  "_moduleAliases": {
+    "@db": "persistence/postgresql/config",
+    "@logger": "utils/loggers"
+  }
+}

@@ -1,6 +1,7 @@
 CREATE TABLE user_activations(
   id SERIAL NOT NULL PRIMARY KEY,
   account_id UUID NOT NULL,
+  corporation_id UUID NOT NULL,
   activation_key VARCHAR(512) NOT NULL,
   active BOOLEAN DEFAULT true,
   ip_address VARCHAR(64),

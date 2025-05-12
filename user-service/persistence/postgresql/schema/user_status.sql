@@ -1,10 +1,13 @@
 CREATE TABLE user_status (
-    serial_no BIGINT GENERATED ALWAYS AS IDENTITY UNIQUE,
-    id UUID PRIMARY KEY,
-    user_id UUID NOT NULL,   
+    id BIGSERIAL PRIMARY KEY,
+    user_id UUID NOT NULL,
+    corporation_id UUID NOT NULL, 
     profile_completed BOOLEAN DEFAULT FALSE,
     subscribed BOOLEAN DEFAULT FALSE,
     subscriptions JSONB,
+     active BOOLEAN DEFAULT false,
+    blocked BOOLEAN DEFAULT false,
+    registered BOOLEAN DEFAULT true,
     created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMPTZ
 );

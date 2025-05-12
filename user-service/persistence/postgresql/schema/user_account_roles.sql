@@ -1,6 +1,6 @@
 
 CREATE TABLE user_account_roles (
-    corporation_id UUID NOT NULL,
+   c
     user_id UUID NOT NULL REFERENCES user_accounts(id) ON DELETE CASCADE,
     role_id SMALLINT NOT NULL REFERENCES user_roles(id) ON DELETE CASCADE,
     assigned_at TIMESTAMPTZ DEFAULT NOW(),

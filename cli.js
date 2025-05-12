@@ -5,8 +5,9 @@ import inquirer from 'inquirer';
 import { execSync } from 'child_process';
 
 const templates = {
-  'user-service': 'templates/user-service',
-  'mail-service': 'templates/mail-service'
+  'corporation_service': 'templates/corporation_service',
+  //'user-service': 'templates/user-service',
+ // 'mail-service': 'templates/mail-service'
 };
 
 const createService = async () => {

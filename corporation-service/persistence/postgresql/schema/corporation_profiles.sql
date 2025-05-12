@@ -1,7 +1,7 @@
 CREATE TABLE corporation_profiles (
     serial_no BIGINT GENERATED ALWAYS AS IDENTITY UNIQUE,
     id UUID PRIMARY KEY,
-    corporation_id UUID NOT NULL UNIQUE,
+    corporation_id UUID NOT NULL,
     external_id JSONB,
     name VARCHAR(512) NOT NULL,
     slug VARCHAR(64) UNIQUE NOT NULL,         -- e.g., "acme-corp"  

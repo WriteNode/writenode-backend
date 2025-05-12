@@ -1,6 +1,7 @@
 CREATE TABLE user_sessions (
-  id UUID PRIMARY KEY,
+  id BIGSERIAL PRIMARY KEY,
   user_id UUID NOT NULL,
+  corporation_id UUID NOT NULL,
   session_key VARCHAR,
   token_hash VARCHAR,
   refresh_token_hash TEXT NOT NULL,

@@ -1,0 +1,6 @@
+{"level":30,"time":1747017523447,"pid":8704,"hostname":"krypton.local","msg":"Home page hit"}
+{"level":30,"time":1747017523485,"pid":8704,"hostname":"krypton.local","msg":"GET / 200 - 0.042s [request-id: d59c88aa-80a4-4dfc-883b-70149d5adb68]"}
+{"level":50,"time":1747017559590,"pid":8704,"hostname":"krypton.local","msg":"Something went wrong"}
+{"level":50,"time":1747017559608,"pid":8704,"hostname":"krypton.local","msg":"GET /error 500 - 0.034s [request-id: ed673195-e2e4-415f-88a5-304ac4262938]"}
+{"level":40,"time":1747017583167,"pid":8704,"hostname":"krypton.local","msg":"GET /metrix 404 - 0.022s [request-id: 12e4ac93-9434-4388-9b86-0359cd807223]"}
+{"level":30,"time":1747017598501,"pid":8704,"hostname":"krypton.local","msg":"GET /metrics 200 - 0.014s [request-id: bfe09e63-5842-4233-a977-0caf7d68da79]"}

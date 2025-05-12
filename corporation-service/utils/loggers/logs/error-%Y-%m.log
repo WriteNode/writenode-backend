@@ -1,0 +1,2 @@
+{"level":50,"time":1747017559590,"pid":8704,"hostname":"krypton.local","msg":"Something went wrong"}
+{"level":50,"time":1747017559608,"pid":8704,"hostname":"krypton.local","msg":"GET /error 500 - 0.034s [request-id: ed673195-e2e4-415f-88a5-304ac4262938]"}

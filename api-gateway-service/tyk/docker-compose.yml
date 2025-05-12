@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  tyk-gateway:
+    image: tykio/tyk-gateway:v5.2.4
+    container_name: tyk-gateway
+    restart: unless-stopped
+    ports:
+      - "3000:3000" # Gateway API
+      - "8080:8080" # Gateway Admin API
+    volumes:
+      - ./tyk.conf:/opt/tyk-gateway/tyk.conf
+    environment:
+      TYK_GW_SECRET: "352d20ee67be67f6340b4c0605b044b7"
+    depends_on:
+      - tyk-redis
+    networks:
+      - tyk
+
+  tyk-redis:
+    image: redis:7.2-alpine
+    container_name: tyk-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - tyk
+
+  tyk-postgres:
+    image: postgres:15-alpine
+    container_name: tyk-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tyk
+      POSTGRES_PASSWORD: tykpass
+      POSTGRES_DB: tyk_analytics
+    volumes:
+      - tyk-postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - tyk
+
+volumes:
+  tyk-postgres-data:
+
+networks:
+  tyk:
+    external: true  # Refers to the network you manually created

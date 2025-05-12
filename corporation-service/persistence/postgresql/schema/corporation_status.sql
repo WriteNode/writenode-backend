@@ -1,6 +1,6 @@
 CREATE TABLE corporation_status (
     serial_no BIGINT GENERATED ALWAYS AS IDENTITY UNIQUE,
-    id UUID PRIMARY KEY,
+    id BIGINT PRIMARY KEY,
     corporation_id UUID NOT NULL,   
     profile_completed BOOLEAN DEFAULT FALSE,
     subscribed BOOLEAN DEFAULT FALSE,
